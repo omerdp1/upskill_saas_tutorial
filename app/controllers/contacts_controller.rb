@@ -5,13 +5,14 @@ end
   def create
   @contact = Contact.new(contact_params)
   if @contact.save
-    flash[:Success] = "Messege Sent"
-    redirect_to new_contact_path
+      flash[:success] = "Messege Sent"
+      redirect_to new_contact_path
   else
-    flash[:error] = @contact.errors.full_messages.join(", ")
-    redirect_to new_contact_path
-  end
-  end
+      flash[:danger] = @contact.errors.full_messages.join(", ")
+
+      redirect_to new_contact_path
+   end
+ end
   
   private
     def contact_params
