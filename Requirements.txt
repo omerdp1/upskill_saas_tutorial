@@ -1,0 +1,8 @@
+Stripe integration
+# Users should have a stripe customer token in the user's table
+# Javascript should prevent pro form from submitting when a user fills out a form
+# and should sent card info to stripe
+# stripe will return a customer token
+# Javascript should sent user fields and card token to our rails app.
+# rails app should validate our user fields. rails will note whether plan 1 or plan 2
+# once validated, rails should sent user credentials, plan id, and card token to stripe servers in order to establish a recurring subscription
